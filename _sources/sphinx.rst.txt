@@ -1,5 +1,5 @@
 ===========================
-make Github pages by Sphinx
+make GitHub Pages by Sphinx
 ===========================
 
 usage
@@ -34,7 +34,7 @@ edit source/conf.py
   favicon = 'favicon.ico'
   pygments = 'monokai'
 
-hosting to GitHub pages
+hosting to GitHub Pages
 =======================
 
 .. code:: sh
