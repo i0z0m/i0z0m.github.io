@@ -45,5 +45,6 @@ hosting to bitbucket pages
   $ git add *
   $ git commit -m "first commit"
   $ git remote add origin git@github.com:i0z0m/i0z0m.github.io.git
-  $ ghp-import -m "publish" build/html
-  $ git push origin gh-pages:master
+  $ pip install --user ghp-import
+  $ ghp-import -m "publish" docs/build/html
+  $ ghp-import -p docs/build/html

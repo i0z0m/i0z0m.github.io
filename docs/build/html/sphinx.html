@@ -201,8 +201,9 @@ $ make html
 $ git add *
 $ git commit -m <span class="s2">&quot;first commit&quot;</span>
 $ git remote add origin git@github.com:i0z0m/i0z0m.github.io.git
-$ ghp-import -m <span class="s2">&quot;publish&quot;</span> build/html
-$ git push origin gh-pages:master
+$ pip install --user ghp-import
+$ ghp-import -m <span class="s2">&quot;publish&quot;</span> docs/build/html
+$ ghp-import -p docs/build/html
 </pre></div>
 </div>
 </div>
