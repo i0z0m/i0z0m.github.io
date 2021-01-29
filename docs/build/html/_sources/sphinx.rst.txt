@@ -34,8 +34,8 @@ edit source/conf.py
   favicon = 'favicon.ico'
   pygments = 'monokai'
 
-hosting to bitbucket pages
-==========================
+hosting to GitHub pages
+=======================
 
 .. code:: sh
 
