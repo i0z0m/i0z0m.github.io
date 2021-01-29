@@ -1,6 +1,6 @@
-=====================================
-make Bitbucket pages docs with Sphinx
-=====================================
+===========================
+make Github pages by Sphinx
+===========================
 
 usage
 =======
@@ -8,8 +8,6 @@ usage
 .. code:: sh
 
    $ pip install --user sphinx ghp-import
-
-pipでインストールしたsphinxコマンドのパスを通すために
 
 .. code:: sh
 
@@ -45,6 +43,5 @@ hosting to bitbucket pages
   $ git add *
   $ git commit -m "first commit"
   $ git remote add origin git@github.com:i0z0m/i0z0m.github.io.git
-  $ pip install --user ghp-import
   $ ghp-import -m "publish" docs/build/html
   $ ghp-import -p docs/build/html
