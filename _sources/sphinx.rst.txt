@@ -9,7 +9,7 @@ usage
 
 .. code:: sh
 
-   $ pip install --user sphinx ghp-import
+   $ pip install --user sphinx ghp-import==0.5.5
 
 .. code:: sh
 
