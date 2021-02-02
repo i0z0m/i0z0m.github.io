@@ -1,8 +1,6 @@
 #+TITLE: test ox-rst
-#+AUTHOR: i0z0m
-#+EMAIL: i0z0mu@gmail.com
-#+DATE: 2021/01/29 19:35
-#+OPTIONS: author:t date:t email:t
+#+DATE: 2021/02/02 19:20
+#+OPTIONS: date:t
 
 * Heading 1
 
