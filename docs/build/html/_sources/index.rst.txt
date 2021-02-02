@@ -11,7 +11,6 @@ Welcome to i0z0m's documentation!
    :caption: Contents:
 
    sphinx
-   test
 
 
 
