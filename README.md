@@ -1,3 +1,5 @@
+$ sphinx-build source docs/build/html
+or  
 $ `make html`  
 or  
 $ `omake`
