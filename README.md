@@ -1,4 +1,4 @@
-$ sphinx-build source docs/build/html
+$ `sphinx-build source docs/build/html`  
 or  
 $ `make html`  
 or  
