@@ -21,4 +21,4 @@ help:
 
 # sphinx-autobuild
 livehtml:
-	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	sphinx-autobuild -b html $(SOURCEDIR) $(BUILDDIR)/html
