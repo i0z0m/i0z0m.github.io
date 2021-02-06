@@ -49,7 +49,7 @@ source_suffix = {
     '.md': 'markdown',
 }
 source_parsers = {}
-# add AutoStructify component
+# add AutoStructify component from recommonmark
 from recommonmark.transform import AutoStructify
 
 github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
