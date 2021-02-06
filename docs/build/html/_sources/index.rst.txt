@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to i0z0m's documentation!
-=================================
+i0z0m's documentation
+=====================
 
 .. toctree::
    :maxdepth: 1
