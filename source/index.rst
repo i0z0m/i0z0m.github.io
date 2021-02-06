@@ -12,6 +12,7 @@ Welcome to i0z0m's documentation!
 
    sphinx
    AutoStructify
+   jupyter
 
 
 

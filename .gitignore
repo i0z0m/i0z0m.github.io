@@ -1,4 +1,1 @@
-.omakedb
-.omakedb.lock
-OMakefile.omc
-OMakeroot.omc
+.ipynb_checkpoints/
