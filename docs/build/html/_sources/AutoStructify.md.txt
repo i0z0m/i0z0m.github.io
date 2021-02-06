@@ -1,4 +1,4 @@
-# build files in markdown with AutoStructify component
+# build files in markdown with AutoStructify component from recommonmark
 
 ## 他文書へのリンク
 [my article about sphinx](sphinx.md)
