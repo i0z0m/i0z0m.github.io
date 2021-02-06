@@ -49,11 +49,12 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-from recommonmark.transform import AutoStructify
-
+from recommonmark.parser import CommonMarkParser
 source_parsers = {
     '.md': CommonMarkParser,
 }
+
+from recommonmark.transform import AutoStructify
 github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 def setup(app):
     app.add_config_value('recommonmark_config', {
