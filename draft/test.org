@@ -1,7 +1,0 @@
-#+TITLE: test ox-rst
-#+DATE: 2021/02/02 19:20
-#+OPTIONS: date:t
-
-* Heading 1
-
-contents 1
