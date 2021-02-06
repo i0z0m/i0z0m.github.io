@@ -1,4 +1,4 @@
-# build files.md with recommonmark
+# build sources.md with recommonmark
 
 ## 他文書へのリンク
 [my article about sphinx](sphinx.md)
