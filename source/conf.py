@@ -48,10 +48,12 @@ source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
 }
-source_parsers = {}
-# add AutoStructify component from recommonmark
+
 from recommonmark.transform import AutoStructify
 
+source_parsers = {
+    '.md': CommonMarkParser,
+}
 github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
 def setup(app):
     app.add_config_value('recommonmark_config', {
