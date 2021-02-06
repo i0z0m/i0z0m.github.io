@@ -34,13 +34,16 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="test matplitlib in Jupyter Notebook" href="jupyter.html" />
     <link rel="prev" title="make GitHub Pages by Sphinx" href="sphinx.html" /> 
 </head>
 
@@ -99,6 +102,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#id3">表組み</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">test matplitlib in Jupyter Notebook</a></li>
 </ul>
 
             
@@ -166,7 +170,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="build-files-in-markdown-with-autostructify-component-from-recommonmark">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="build-files-in-markdown-with-autostructify-component-from-recommonmark">
 <h1>build files in markdown with AutoStructify component from recommonmark<a class="headerlink" href="#build-files-in-markdown-with-autostructify-component-from-recommonmark" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>他文書へのリンク<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -219,6 +247,7 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="jupyter.html" class="btn btn-neutral float-right" title="test matplitlib in Jupyter Notebook" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="sphinx.html" class="btn btn-neutral float-left" title="make GitHub Pages by Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
