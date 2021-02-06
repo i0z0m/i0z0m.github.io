@@ -63,7 +63,7 @@ author = 'i0z0m'
 # built documents.
 #
 # The short X.Y version.
-version = '0.z.0'
+version = '0.0.1'
 # The full version, including alpha/beta/rc tags.
 release = '1.0.0'
 
