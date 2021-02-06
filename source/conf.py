@@ -49,6 +49,16 @@ source_suffix = {
     '.md': 'markdown',
 }
 source_parsers = {}
+# add AutoStructify component
+from recommonmark.transform import AutoStructify
+
+github_doc_root = 'https://github.com/rtfd/recommonmark/tree/master/doc/'
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+            'url_resolver': lambda url: github_doc_root + url,
+            'auto_toc_tree_section': 'Contents',
+            }, True)
+    app.add_transform(AutoStructify)
 
 # The master toctree document.
 master_doc = 'index'
