@@ -1,9 +1,12 @@
-$ `sphinx-build source docs/build/html`  
-or  
+# build by sphinx
 $ `make html`  
-or  
-$ `omake`
 
+or autobuild  
+$ `make livehtml`
+
+
+
+# deploy
 ```console
 $ git add source/ docs/  
 $ git commit -m "update"
