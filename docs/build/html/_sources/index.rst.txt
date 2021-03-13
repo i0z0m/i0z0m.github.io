@@ -13,7 +13,7 @@ i0z0m's documentation
    sphinx
    recommonmark
    jupyter
-
+   input-Japanese-with-vi-keybind
 
 
 Indices and tables
