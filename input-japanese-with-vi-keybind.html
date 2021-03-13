@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="jp" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>vi keybindで挿入モードから抜ける時に日本語OFF &mdash; i0z0m 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> i0z0m
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sphinx.html">make GitHub Pages by Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommonmark.html">build sources.md with recommonmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">test matplitlib in Jupyter Notebook</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">i0z0m</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>vi keybindで挿入モードから抜ける時に日本語OFF</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/input-japanese-with-vi-keybind.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="vi-keybindoff">
+<h1>vi keybindで挿入モードから抜ける時に日本語OFF<a class="headerlink" href="#vi-keybindoff" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>目的<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>vi keybindを使うエディタにおいて，挿入モードで日本語入力した後に，
+normalモードでコマンドを入力しようとして失敗する煩わしさを解消する．</p>
+<p>使っているLinuxがWindowsのWSl2上か気にしなくていいように，
+できる限り設定を共通化する．</p>
+</div>
+<div class="section" id="fcitx">
+<h2>fcitx<a class="headerlink" href="#fcitx" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linux">
+<h3>linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">.zprofile</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -e /mnt/c/WINDOWS/System32/wsl.exe <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">export</span> <span class="nv">GTK_IM_MODULE</span><span class="o">=</span><span class="s1">&#39;fcitx&#39;</span>
+  <span class="nb">export</span> <span class="nv">QT_IM_MODULE</span><span class="o">=</span><span class="s1">&#39;fcitx&#39;</span>
+  <span class="nb">export</span> <span class="nv">XMODIFIERS</span><span class="o">=</span><span class="s1">&#39;@im=fcitx&#39;</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$SHLVL</span> <span class="o">=</span> <span class="m">1</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="o">(</span>fcitx-autostart &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">&amp;</span><span class="o">)</span>
+    xset -r <span class="m">49</span>  &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+  <span class="k">fi</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="neo-vim">
+<h3>(Neo)vim<a class="headerlink" href="#neo-vim" title="Permalink to this headline">¶</a></h3>
+<p>add this plugin https://github.com/lilydjwg/fcitx.vim</p>
+<p><code class="docutils literal notranslate"><span class="pre">.zshenv</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -e /mnt/c/WINDOWS/System32/wsl.exe <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="k">$(</span>cat /etc/resolv.conf <span class="p">|</span> grep nameserver <span class="p">|</span> awk <span class="s1">&#39;{print $2; exit;}&#39;</span><span class="k">)</span>:0.0
+  <span class="nb">export</span> <span class="nv">FCITX_SOCKET</span><span class="o">=</span>/tmp/fcitx-socket-:0
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="doom-emacs">
+<h3>(Doom) emacs<a class="headerlink" href="#doom-emacs" title="Permalink to this headline">¶</a></h3>
+<p>add this package https://github.com/cute-jumper/fcitx.el</p>
+<p><code class="docutils literal notranslate"><span class="pre">config.el</span></code></p>
+<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">fcitx-default-setup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="vscodevim">
+<h3>VSCodeVim<a class="headerlink" href="#vscodevim" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">settins.json</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;vim.autoSwitchInputMethod.enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.obtainIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;/usr/bin/fcitx-remote&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.switchIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;/usr/bin/fcitx-remote {im}&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.defaultIM&quot;</span><span class="p">:</span> <span class="s2">&quot;-c&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="zenhan">
+<h2>zenhan<a class="headerlink" href="#zenhan" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="windows">
+<h3>windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">powershell</span></code></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>iwr -useb get.scoop.sh <span class="p">|</span> iex
+<span class="gp">$ </span>scoop install zenhan
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">.zprofile</span></code></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -e /mnt/c/WINDOWS/System32/wsl.exe <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">export</span> <span class="nv">zenhan</span><span class="o">=</span><span class="s1">&#39;/mnt/c/Users/USER/scoop/apps/zenhan/current/zenhan.exe&#39;</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>(Neo)vim<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">.vimrc</span></code></p>
+<div class="highlight-config notranslate"><div class="highlight"><pre><span></span>autocmd InsertLeave * :call system(&#39;${zenhan} 0&#39;)
+autocmd CmdlineLeave * :call system(&#39;${zenhan} 0&#39;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>(Doom) emacs<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">config.el</span></code></p>
+<div class="highlight-elisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;evil-normal-state-entry-hook</span>
+  <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nf">string=</span> <span class="s">&quot;2\\n&quot;</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&quot;${zenhan} 0&quot;</span><span class="p">))</span>
+        <span class="p">(</span><span class="nv">shell-command</span> <span class="s">&quot;${zenhan} 0&quot;</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>VSCodeVim<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">settins.jsonn</span></code></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;vim.autoSwitchInputMethod.enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.defaultIM&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.obtainIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.switchIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, i0z0m.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
