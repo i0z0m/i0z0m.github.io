@@ -19,8 +19,9 @@ Linuxではfcitx，WindowsではMicrosoft IME．
 3. `全角/半角`キーを押し忘れて日本語入力ONのままで，COMMANDモードを使えず煩わしい
 
 ### 対策
-NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．
+NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．[^1]
 
+[^1]: 日本語入力ONのままでCOMMANDモードを使えるようにするには，[この記事](https://qiita.com/ssh0/items/9e7f0d8b8f033183dd0b)を参照．
 
 ## fcitx(-remote) in Linux
 
