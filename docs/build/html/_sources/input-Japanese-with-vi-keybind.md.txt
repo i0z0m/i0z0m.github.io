@@ -1,16 +1,28 @@
 # vi keybindで挿入モードから抜ける時に日本語OFF
+DATE: 2021-03-25
 
-## 目的
-vi keybindを使うエディタにおいて，挿入モードで日本語入力した後に，
-normalモードでコマンドを入力しようとして失敗する煩わしさを解消する．
+## 想定
 
-使っているLinuxがWindowsのWSl2上か気にしなくていいように，
-できる限り設定を共通化する．
+### 環境
+- Linux  
+直接インストールされているか，WindowsのWSL2のVM
 
-## fcitx
+- vi keybindに対応したエディタ  
+(Neo)Vim, (Doom) Emacs, VSCodeVim
+
+### 状況
+1. `i`キーでINSERTモードに入り，`全角/半角`キーを押して日本語入力
+2. `Esc`キーまたは`Ctrl`+`[`キーでNORMALモードに戻る
+3. `全角/半角`キーを押し忘れて日本語入力ONのままで，COMMANDモードを使えず煩わしい
+
+### 対策
+NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．
+
+
+## fcitx(-remote) in linux
 
 ### linux
-`.zprofile`
+- `.zprofile`
 
 ``` shell
 if [ -e /mnt/c/WINDOWS/System32/wsl.exe ]; then
@@ -23,11 +35,19 @@ if [ -e /mnt/c/WINDOWS/System32/wsl.exe ]; then
   fi
 fi
 ```
+
+- `.zshenv`
+
+``` shell
+eval $(dbus-launch)
+export DBUS_SESSION_BUS_ADDRESS
+```
+
+
 ### (Neo)vim
+use https://github.com/lilydjwg/fcitx.vim
 
-add this plugin https://github.com/lilydjwg/fcitx.vim
-
-`.zshenv`
+- `.zshenv`
 
 ``` shell
 if [ -e /mnt/c/WINDOWS/System32/wsl.exe ]; then
@@ -37,15 +57,15 @@ fi
 ```
 
 ### (Doom) emacs
-add this package https://github.com/cute-jumper/fcitx.el
+use https://github.com/cute-jumper/fcitx.el
 
-`config.el`
+- `config.el`
 
 ``` elisp
 (fcitx-default-setup)
 ```
 ### VSCodeVim
-`settins.json`
+- `settins.json`
 
 ```json
 "vim.autoSwitchInputMethod.enable": true,
@@ -54,17 +74,17 @@ add this package https://github.com/cute-jumper/fcitx.el
 "vim.autoSwitchInputMethod.defaultIM": "-c"
 ```
 
-## zenhan
+## zenhan.exe in Windows
 
 ### windows
-`powershell`
+- `powershell`
 
 ```console
 $ iwr -useb get.scoop.sh | iex
 $ scoop install zenhan
 ```
 
-`.zprofile`
+- `.zprofile`
 
 ``` shell
 if [ -e /mnt/c/WINDOWS/System32/wsl.exe ]; then
@@ -73,14 +93,14 @@ fi
 ```
 
 ### (Neo)vim
-`.vimrc`
+- `.vimrc`
 
 ``` config
 autocmd InsertLeave * :call system('${zenhan} 0')
 autocmd CmdlineLeave * :call system('${zenhan} 0')
 ```
 ### (Doom) emacs
-`config.el`
+- `config.el`
 
 ``` elisp
 (add-hook 'evil-normal-state-entry-hook
@@ -89,11 +109,11 @@ autocmd CmdlineLeave * :call system('${zenhan} 0')
         (shell-command "${zenhan} 0"))))
 ```
 ### VSCodeVim
-`settins.jsonn`
+- `settins.jsonn`
 
 ```json
 "vim.autoSwitchInputMethod.enable": true,
 "vim.autoSwitchInputMethod.defaultIM": "0",
 "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0",
 "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}",
-```
+``
