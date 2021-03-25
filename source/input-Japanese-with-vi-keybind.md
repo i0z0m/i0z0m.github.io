@@ -10,6 +10,10 @@ DATE: 2021-03-25
 - vi keybindに対応したエディタ  
 (Neo)Vim, (Doom) Emacs, VSCodeVim
 
+- 日本語入力のIME
+Linuxではfcitx，Windowsでは標準日本語入力．  
+Windowsでは，Google日本語入力に乗り換え方が[てっとり早い](http://atomiyama.com/linux/page/google-nihongo-nyuuryoku/)．
+
 ### 状況
 1. `i`キーでINSERTモードに入り，`全角/半角`キーを押して日本語入力
 2. `Esc`キーまたは`Ctrl`+`[`キーでNORMALモードに戻る
@@ -19,9 +23,9 @@ DATE: 2021-03-25
 NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．
 
 
-## fcitx(-remote) in linux
+## fcitx(-remote) in Linux
 
-### linux
+### Linux
 - `.zprofile`
 
 ``` shell
@@ -76,7 +80,7 @@ use https://github.com/cute-jumper/fcitx.el
 
 ## zenhan.exe in Windows
 
-### windows
+### Windows
 - `powershell`
 
 ```console
