@@ -11,7 +11,8 @@ DATE: 2021-03-25
 (Neo)Vim, (Doom) Emacs, VSCodeVim
 
 - 日本語入力のIME
-Linuxではfcitx，Windowsでは標準またはGoogle日本語入力．SKK使用を想定しない．
+Linuxではfcitx，Windowsでは標準日本語入力．  
+Windowsでは，Google日本語入力に乗り換え方が[てっとり早い](http://atomiyama.com/linux/page/google-nihongo-nyuuryoku/)．
 
 ### 状況
 1. `i`キーでINSERTモードに入り，`全角/半角`キーを押して日本語入力
