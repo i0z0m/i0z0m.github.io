@@ -98,6 +98,8 @@ fi
 autocmd InsertLeave * :call system('${zenhan} 0')
 autocmd CmdlineLeave * :call system('${zenhan} 0')
 ```
+WSL2環境で https://github.com/lilydjwg/fcitx.vim と競合せず無事に使えている．
+
 ### (Doom) emacs
 - `config.el`
 
@@ -107,6 +109,9 @@ autocmd CmdlineLeave * :call system('${zenhan} 0')
     (if (string= "2\\n" (shell-command-to-string "${zenhan} 0"))
         (shell-command "${zenhan} 0"))))
 ```
+WSL2環境で https://github.com/cute-jumper/fcitx.el と競合せず無事に使えている．  
+org-agendaバッファ生成時にzenhan連打されて日本語オフを強制される不具合があるけど，気にしないようにする．
+
 ### VSCodeVim
 - `settins.jsonn`
 
@@ -116,3 +121,6 @@ autocmd CmdlineLeave * :call system('${zenhan} 0')
 "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0",
 "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}",
 ```
+
+[Settings Sync拡張機能](https://qiita.com/hideki0145/items/d440adcc5d34541ed5f0)を使ってwindowsとlinux間で設定を切り替えようとしたけど失敗．  
+現状ではSettig Sync機能で同期せず，windowsとlinuxでは別々の`settings.json"を使っている．
