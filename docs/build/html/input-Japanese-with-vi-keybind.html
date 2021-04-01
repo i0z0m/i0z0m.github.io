@@ -101,7 +101,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#id1">想定</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">環境</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">状況</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">対策</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#fcitx-remote-in-linux">fcitx(-remote) in Linux</a><ul>
@@ -113,9 +112,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#zenhan-exe-in-windows">zenhan.exe in Windows</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">(Neo)vim</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">(Doom) emacs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">VSCodeVim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">(Neo)vim</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">(Doom) emacs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">VSCodeVim</a></li>
 </ul>
 </li>
 </ul>
@@ -232,11 +231,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">全角/半角</span></code>キーを押し忘れて日本語入力ONのままで，COMMANDモードに入れず煩わしい</p></li>
 </ol>
 </div>
-<div class="section" id="id4">
-<h3>対策<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>※日本語入力ONのままでCOMMANDモードに入れるようにする設定は，<a class="reference external" href="https://qiita.com/ssh0/items/9e7f0d8b8f033183dd0b">この記事</a>を参照．</p>
-<p>NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．</p>
-</div>
 </div>
 <div class="section" id="fcitx-remote-in-linux">
 <h2>fcitx(-remote) in Linux<a class="headerlink" href="#fcitx-remote-in-linux" title="Permalink to this headline">¶</a></h2>
@@ -320,18 +314,18 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h3>(Neo)vim<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>(Neo)vim<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.vimrc</span></code></p></li>
 </ul>
-<div class="highlight-config notranslate"><div class="highlight"><pre><span></span>autocmd InsertLeave * :call system(&#39;${zenhan} 0&#39;)
-autocmd CmdlineLeave * :call system(&#39;${zenhan} 0&#39;)
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>autocmd <span class="nb">InsertLeave</span> * :<span class="k">call</span> system<span class="p">(</span><span class="s1">&#39;${zenhan} 0&#39;</span><span class="p">)</span>
+autocmd CmdlineLeave * :<span class="k">call</span> system<span class="p">(</span><span class="s1">&#39;${zenhan} 0&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="id6">
-<h3>(Doom) emacs<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>(Doom) emacs<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config.el</span></code></p></li>
 </ul>
@@ -342,16 +336,15 @@ autocmd CmdlineLeave * :call system(&#39;${zenhan} 0&#39;)
 </pre></div>
 </div>
 </div>
-<div class="section" id="id7">
-<h3>VSCodeVim<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>VSCodeVim<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">settins.jsonn</span></code></p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&quot;vim.autoSwitchInputMethod.enable&quot;: true,
-&quot;vim.autoSwitchInputMethod.defaultIM&quot;: &quot;0&quot;,
-&quot;vim.autoSwitchInputMethod.obtainIMCmd&quot;: &quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0&quot;,
-&quot;vim.autoSwitchInputMethod.switchIMCmd&quot;: &quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}&quot;,
-``
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;vim.autoSwitchInputMethod.enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.defaultIM&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.obtainIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;vim.autoSwitchInputMethod.switchIMCmd&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}&quot;</span><span class="p">,</span>
 </pre></div>
 </div>
 </div>

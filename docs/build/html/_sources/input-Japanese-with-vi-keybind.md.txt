@@ -18,11 +18,6 @@ Linuxではfcitx，WindowsではMicrosoft IME．
 2. `Esc`キーまたは`Ctrl`+`[`キーでNORMALモードに戻る
 3. `全角/半角`キーを押し忘れて日本語入力ONのままで，COMMANDモードに入れず煩わしい
 
-### 対策
-※日本語入力ONのままでCOMMANDモードに入れるようにする設定は，[この記事](https://qiita.com/ssh0/items/9e7f0d8b8f033183dd0b)を参照．
-
-NORMALモードに戻ると同時に，自動で日本語OFFになるように設定する．
-
 ## fcitx(-remote) in Linux
 
 ### Linux
@@ -99,7 +94,7 @@ fi
 ### (Neo)vim
 - `.vimrc`
 
-``` config
+``` vim
 autocmd InsertLeave * :call system('${zenhan} 0')
 autocmd CmdlineLeave * :call system('${zenhan} 0')
 ```
@@ -120,4 +115,4 @@ autocmd CmdlineLeave * :call system('${zenhan} 0')
 "vim.autoSwitchInputMethod.defaultIM": "0",
 "vim.autoSwitchInputMethod.obtainIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe 0",
 "vim.autoSwitchInputMethod.switchIMCmd": "C:\\Users\\USER\\scoop\\apps\\zenhan\\current\\zenhan.exe {im}",
-``
+```
