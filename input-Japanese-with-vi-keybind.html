@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="jp" >
+<html class="writer-html5" lang="ja" >
 <head>
   <meta charset="utf-8" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>vi keybindで挿入モードから抜ける時に日本語OFF &mdash; i0z0m 1.0.0 documentation</title>
+  <title>vi keybindで挿入モードから抜ける時に日本語OFF &mdash; i0z0m 1.0.0 ドキュメント</title>
   
 
   
@@ -34,6 +34,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
@@ -41,8 +42,8 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
     <link rel="prev" title="test matplitlib in Jupyter Notebook" href="jupyter.html" /> 
 </head>
 
@@ -211,12 +212,12 @@
 }
 </style>
 <div class="section" id="vi-keybindoff">
-<h1>vi keybindで挿入モードから抜ける時に日本語OFF<a class="headerlink" href="#vi-keybindoff" title="Permalink to this headline">¶</a></h1>
+<h1>vi keybindで挿入モードから抜ける時に日本語OFF<a class="headerlink" href="#vi-keybindoff" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>DATE: 2021-03-25</p>
 <div class="section" id="id1">
-<h2>想定<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>想定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="id2">
-<h3>環境<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>環境<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p>Linux<br />直接インストールされているか，WindowsのWSL2のVM</p></li>
 <li><p>vi keybindに対応したエディタ<br />(Neo)Vim, (Doom) Emacs, VSCodeVim</p></li>
@@ -224,7 +225,7 @@
 </ul>
 </div>
 <div class="section" id="id3">
-<h3>状況<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>状況<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">i</span></code>キーでINSERTモードに入り，<code class="docutils literal notranslate"><span class="pre">全角/半角</span></code>キーを押して日本語入力</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Esc</span></code>キーまたは<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code>+<code class="docutils literal notranslate"><span class="pre">[</span></code>キーでNORMALモードに戻る</p></li>
@@ -233,9 +234,9 @@
 </div>
 </div>
 <div class="section" id="fcitx-remote-in-linux">
-<h2>fcitx(-remote) in Linux<a class="headerlink" href="#fcitx-remote-in-linux" title="Permalink to this headline">¶</a></h2>
+<h2>fcitx(-remote) in Linux<a class="headerlink" href="#fcitx-remote-in-linux" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.zprofile</span></code></p></li>
 </ul>
@@ -259,7 +260,7 @@
 </div>
 </div>
 <div class="section" id="neo-vim">
-<h3>(Neo)vim<a class="headerlink" href="#neo-vim" title="Permalink to this headline">¶</a></h3>
+<h3>(Neo)vim<a class="headerlink" href="#neo-vim" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>use <a class="reference external" href="https://github.com/lilydjwg/fcitx.vim">lilydjwg/fcitx.vim</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.zshenv</span></code></p></li>
@@ -272,7 +273,7 @@
 </div>
 </div>
 <div class="section" id="doom-emacs">
-<h3>(Doom) emacs<a class="headerlink" href="#doom-emacs" title="Permalink to this headline">¶</a></h3>
+<h3>(Doom) emacs<a class="headerlink" href="#doom-emacs" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>use <a class="reference external" href="https://github.com/cute-jumper/fcitx.el">cute-jumper/fcitx.el</a></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config.el</span></code></p></li>
@@ -282,7 +283,7 @@
 </div>
 </div>
 <div class="section" id="vscodevim">
-<h3>VSCodeVim<a class="headerlink" href="#vscodevim" title="Permalink to this headline">¶</a></h3>
+<h3>VSCodeVim<a class="headerlink" href="#vscodevim" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">settins.json</span></code></p></li>
 </ul>
@@ -295,9 +296,9 @@
 </div>
 </div>
 <div class="section" id="zenhan-exe-in-windows">
-<h2>zenhan.exe in Windows<a class="headerlink" href="#zenhan-exe-in-windows" title="Permalink to this headline">¶</a></h2>
+<h2>zenhan.exe in Windows<a class="headerlink" href="#zenhan-exe-in-windows" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">powershell</span></code></p></li>
 </ul>
@@ -315,7 +316,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h3>(Neo)vim<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>(Neo)vim<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.vimrc</span></code></p></li>
 </ul>
@@ -326,7 +327,7 @@ autocmd CmdlineLeave * :<span class="k">call</span> system<span class="p">(</spa
 <p>WSL2環境で <a class="reference external" href="https://github.com/lilydjwg/fcitx.vim">lilydjwg/fcitx.vim</a> と競合せず無事に使えている．</p>
 </div>
 <div class="section" id="id5">
-<h3>(Doom) emacs<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>(Doom) emacs<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">config.el</span></code></p></li>
 </ul>
@@ -339,7 +340,7 @@ autocmd CmdlineLeave * :<span class="k">call</span> system<span class="p">(</spa
 <p>WSL2環境で <a class="reference external" href="https://github.com/cute-jumper/fcitx.el">cute-jumper/fcitx.el</a> と競合せず無事に使えている．<br />org-agendaバッファ生成時にzenhan連打されて日本語オフを強制される不具合があるけど，気にしないようにする．</p>
 </div>
 <div class="section" id="id6">
-<h3>VSCodeVim<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3>VSCodeVim<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">settins.jsonn</span></code></p></li>
 </ul>
