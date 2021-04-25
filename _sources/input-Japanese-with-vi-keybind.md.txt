@@ -110,7 +110,12 @@ WSL2環境で [lilydjwg/fcitx.vim](https://github.com/lilydjwg/fcitx.vim) と競
         (shell-command "${zenhan} 0"))))
 ```
 WSL2環境で [cute-jumper/fcitx.el](https://github.com/cute-jumper/fcitx.el) と競合せず無事に使えている．  
-org-agendaバッファ生成時にzenhan連打されて日本語オフを強制される不具合があるけど，気にしないようにする．
+
+Doom emacsを[nmartin84/.doom.d](https://github.com/nmartin84/.doom.d)のGTDメソッドで使用していて，emacs daemonの起動後に
+``` emacs
+(add-hook 'after-init-hook 'org-agenda-list)
+```
+でorg-agendaバッファを自動生成中，何故かzenhan連打されて日本語オフを強制される不具合がある．
 
 ### VSCodeVim
 - `settins.jsonn`
