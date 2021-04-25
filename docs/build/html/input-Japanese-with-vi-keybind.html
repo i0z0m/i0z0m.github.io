@@ -337,7 +337,12 @@ autocmd CmdlineLeave * :<span class="k">call</span> system<span class="p">(</spa
         <span class="p">(</span><span class="nv">shell-command</span> <span class="s">&quot;${zenhan} 0&quot;</span><span class="p">))))</span>
 </pre></div>
 </div>
-<p>WSL2環境で <a class="reference external" href="https://github.com/cute-jumper/fcitx.el">cute-jumper/fcitx.el</a> と競合せず無事に使えている．<br />org-agendaバッファ生成時にzenhan連打されて日本語オフを強制される不具合があるけど，気にしないようにする．</p>
+<p>WSL2環境で <a class="reference external" href="https://github.com/cute-jumper/fcitx.el">cute-jumper/fcitx.el</a> と競合せず無事に使えている．</p>
+<p>Doom emacsを<a class="reference external" href="https://github.com/nmartin84/.doom.d">nmartin84/.doom.d</a>のGTDメソッドで使用していて，emacs daemonの起動後に</p>
+<div class="highlight-emacs notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-init-hook</span> <span class="ss">&#39;org-agenda-list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>でorg-agendaバッファを自動生成中，何故かzenhan連打されて日本語オフを強制される不具合がある．</p>
 </div>
 <div class="section" id="id6">
 <h3>VSCodeVim<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h3>
