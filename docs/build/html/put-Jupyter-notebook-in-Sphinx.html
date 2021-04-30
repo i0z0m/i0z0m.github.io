@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>test matplitlib in Jupyter Notebook &mdash; i0z0m 1.0.0 ドキュメント</title>
+  <title>put Jupyter notebook in Sphinx &mdash; i0z0m 1.0.0 ドキュメント</title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="検索" href="search.html" />
-    <link rel="next" title="vi keybindで挿入モードから抜ける時に日本語OFF" href="input-Japanese-with-vi-keybind.html" />
-    <link rel="prev" title="build sources.md with recommonmark" href="recommonmark.html" /> 
+    <link rel="next" title="vi keybindで挿入モードから抜ける時に日本語OFF" href="auto-off-Japanese-input-with-Vi-keybind.html" />
+    <link rel="prev" title="make GitHub Pages by Sphinx" href="make-GitHub-pages-by-Sphinx.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,10 +96,10 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sphinx.html">make GitHub Pages by Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recommonmark.html">build sources.md with recommonmark</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">test matplitlib in Jupyter Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="input-Japanese-with-vi-keybind.html">vi keybindで挿入モードから抜ける時に日本語OFF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-md-by-recommonmark.html">build sources.md with recommonmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="make-GitHub-pages-by-Sphinx.html">make GitHub Pages by Sphinx</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">put Jupyter notebook in Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto-off-Japanese-input-with-Vi-keybind.html">vi keybindで挿入モードから抜ける時に日本語OFF</a></li>
 </ul>
 
             
@@ -148,13 +148,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>test matplitlib in Jupyter Notebook</li>
+      <li>put Jupyter notebook in Sphinx</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/jupyter.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/put-Jupyter-notebook-in-Sphinx.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -437,14 +437,14 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="test-matplitlib-in-Jupyter-Notebook">
-<h1>test matplitlib in Jupyter Notebook<a class="headerlink" href="#test-matplitlib-in-Jupyter-Notebook" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>copy samples from <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html">Visualization with Matplotlib</a> to Jupyter Notebook</p>
+<div class="section" id="put-Jupyter-notebook-in-Sphinx">
+<h1>put Jupyter notebook in Sphinx<a class="headerlink" href="#put-Jupyter-notebook-in-Sphinx" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>copy samples from <a class="reference external" href="https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html">Visualization with Matplotlib</a> to Jupyter Notebook.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<div class="input_area highlight-python3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
@@ -454,7 +454,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<div class="input_area highlight-python3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;classic&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -463,7 +463,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<div class="input_area highlight-python3 notranslate"><div class="highlight"><pre>
 <span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 </pre></div>
 </div>
@@ -472,7 +472,7 @@ div.rendered_html tbody tr:hover {
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
+<div class="input_area highlight-python3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
@@ -486,18 +486,10 @@ div.rendered_html tbody tr:hover {
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/jupyter_4_0.png" src="_images/jupyter_4_0.png" />
+<img alt="_images/put-Jupyter-notebook-in-Sphinx_5_0.png" src="_images/put-Jupyter-notebook-in-Sphinx_5_0.png" />
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-python notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
+<p><a class="reference external" href="https://qiita.com/pashango2/items/d1b379b699af85b529ce#jupyter%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%802017-02-06%E8%BF%BD%E5%8A%A0">Jupyterのノートブックを取り込む</a></p>
 </div>
 
 
@@ -506,8 +498,8 @@ div.rendered_html tbody tr:hover {
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="input-Japanese-with-vi-keybind.html" class="btn btn-neutral float-right" title="vi keybindで挿入モードから抜ける時に日本語OFF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="recommonmark.html" class="btn btn-neutral float-left" title="build sources.md with recommonmark" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auto-off-Japanese-input-with-Vi-keybind.html" class="btn btn-neutral float-right" title="vi keybindで挿入モードから抜ける時に日本語OFF" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="make-GitHub-pages-by-Sphinx.html" class="btn btn-neutral float-left" title="make GitHub Pages by Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

@@ -5,8 +5,15 @@
    "id": "american-thanks",
    "metadata": {},
    "source": [
-    "# test matplitlib in Jupyter Notebook\n",
-    "copy samples from [Visualization with Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html) to Jupyter Notebook"
+    "# put Jupyter notebook in Sphinx"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "compound-cancer",
+   "metadata": {},
+   "source": [
+    "copy samples from [Visualization with Matplotlib](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html) to Jupyter Notebook."
    ]
   },
   {
@@ -69,12 +76,12 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "polar-agreement",
+   "cell_type": "markdown",
+   "id": "hourly-ideal",
    "metadata": {},
-   "outputs": [],
-   "source": []
+   "source": [
+    "[Jupyterのノートブックを取り込む](https://qiita.com/pashango2/items/d1b379b699af85b529ce#jupyter%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E5%8F%96%E3%82%8A%E8%BE%BC%E3%82%802017-02-06%E8%BF%BD%E5%8A%A0)"
+   ]
   }
  ],
  "metadata": {
@@ -92,8 +99,8 @@
    "mimetype": "text/x-python",
    "name": "python",
    "nbconvert_exporter": "python",
-   "pygments_lexer": "python",
-   "version": "3.9.1"
+   "pygments_lexer": "python3",
+   "version": "3.9.4"
   }
  },
  "nbformat": 4,

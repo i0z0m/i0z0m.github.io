@@ -10,11 +10,10 @@ i0z0m's documentation
    :maxdepth: 1
    :caption: Contents:
 
-   sphinx
-   recommonmark
-   jupyter
-   input-Japanese-with-vi-keybind
-
+   build-md-by-recommonmark
+   make-GitHub-pages-by-Sphinx
+   put-Jupyter-notebook-in-Sphinx
+   auto-off-Japanese-input-with-Vi-keybind
 
 Indices and tables
 ==================
