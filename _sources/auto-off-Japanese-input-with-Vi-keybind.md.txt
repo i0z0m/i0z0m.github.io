@@ -111,7 +111,7 @@ WSL2環境で [lilydjwg/fcitx.vim](https://github.com/lilydjwg/fcitx.vim) と競
 ```
 WSL2環境で [cute-jumper/fcitx.el](https://github.com/cute-jumper/fcitx.el) と競合せず無事に使えている．  
 
-Doom emacsを[nmartin84/.doom.d](https://github.com/nmartin84/.doom.d)のGTDメソッドで使用していて，emacs daemonの起動後に
+Doom emacsを[nmartin84/.doom.d のfork](https://github.com/i0z0m/.doom.d)で使用していて，emacs daemonの起動後に
 ``` emacs
 (add-hook 'after-init-hook 'org-agenda-list)
 ```
