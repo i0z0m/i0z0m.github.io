@@ -1,3 +1,28 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://i0z0m.github.io'
+languageCode = 'ja-jp'
+title = 'i0z0m(KIYOSE Izumu)'
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+author = "KIYOSE Izumu"
+description = "I have albinism."
+github = "i0z0m"
+email = "i0z0mu@gmail.com"
+url = "https://i0z0m.github.io"
+keywords = "blog"
+rss = true
+lastmod = true
+userStatusEmoji = "😀"
+favicon = "/images/github.png"
+avatar = "/images/avatar.png"
+location = "Osaka, Japan"
+enableGitalk = false
+
+[[params.links]]
+title = "Link"
+href = "https://keyoxide.org/471779A9382362C6C5CB1C1A9EA63C033B7D9207"
+
+[frontmatter]
+lastmod = ["lastmod", ":fileModTime", ":default"]
