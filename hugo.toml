@@ -1,4 +1,4 @@
-baseURL = 'https://i0z0m.github.io'
+baseURL = 'https://i0z0m.github.io/'
 languageCode = 'ja-jp'
 title = 'i0z0m (KIYOSE Izumu)'
 theme = "github-style"
@@ -10,7 +10,7 @@ author = "KIYOSE Izumu"
 description = "I have albinism."
 github = "i0z0m"
 email = "i0z0mu@gmail.com"
-url = "https://i0z0m.github.io"
+url = "https://i0z0m.github.io/"
 keywords = "blog"
 rss = true
 lastmod = true
