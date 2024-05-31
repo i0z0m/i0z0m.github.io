@@ -15,8 +15,9 @@ keywords = "blog"
 rss = true
 lastmod = true
 userStatusEmoji = "😀"
-favicon = "/images/github.png"
+favicon = "/images/github-mark-white.png"
 avatar = "/images/avatar.png"
+headerIcon = "/images/github-mark-white.png"
 location = "Osaka, Japan"
 enableGitalk = false
 
