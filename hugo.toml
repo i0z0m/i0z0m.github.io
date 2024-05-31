@@ -1,6 +1,6 @@
 baseURL = 'https://i0z0m.github.io'
 languageCode = 'ja-jp'
-title = 'i0z0m(KIYOSE Izumu)'
+title = 'i0z0m (KIYOSE Izumu)'
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
