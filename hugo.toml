@@ -6,7 +6,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-author = "KIYOSE Izumu"
+author = "izumu"
 description = "I have albinism."
 github = "i0z0m"
 email = "i0z0mu@gmail.com"
@@ -18,7 +18,7 @@ userStatusEmoji = "🥺"
 favicon = "/images/github-mark-white.png"
 avatar = "/images/avatar.png"
 headerIcon = "/images/github-mark-white.png"
-location = "Osaka, Japan"
+location = "Japan"
 enableGitalk = false
 
 [[params.links]]
